@@ -26,7 +26,7 @@ post_data = [
     {
         "userId":  "Alex Gates",
         "id": 5,
-        "title": " nesciunt quas odio",
+        "title": "nesciunt quas odio",
         "body": "repudiandae veniam quaerat sunt sed\nalias aut fugiat sit autem sed est\nvoluptatem omnis possimus esse voluptatibus quis\nest aut tenetur dolor neque"
     },
     {
@@ -38,9 +38,14 @@ post_data = [
 
 # Your Code Start from here
 
-
-
+i = 0
+while i < 6:
+    title = post_data[i].get("title")
+    title_text = title.split(" ")
+    slug_text = title_text[0]+"-"+title_text[1]+"-"+title_text[2]
+    slug = post_data[i].update({"slug": slug_text})
+    i+=1
 
 # Your code ends here
 
-print(post_data[4])
+print(post_data[1])
